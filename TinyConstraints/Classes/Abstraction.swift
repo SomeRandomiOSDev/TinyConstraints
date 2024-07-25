@@ -33,7 +33,7 @@ import Foundation
     public typealias TinyEdgeInsets = NSEdgeInsets
     
     public extension NSEdgeInsets {
-        static var zero = NSEdgeInsetsZero
+        static let zero = NSEdgeInsetsZero
     }
 #else
     import UIKit

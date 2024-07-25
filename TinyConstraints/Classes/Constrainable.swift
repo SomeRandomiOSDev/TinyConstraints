@@ -38,9 +38,11 @@ extension TinyView: Constrainable {
 
 extension LayoutGuide: Constrainable {
     @discardableResult
+    @inlinable
     public func prepareForLayout() -> Self { return self }
 }
 
+@preconcurrency @MainActor
 public protocol Constrainable {
     var topAnchor: NSLayoutYAxisAnchor { get }
     var bottomAnchor: NSLayoutYAxisAnchor { get }

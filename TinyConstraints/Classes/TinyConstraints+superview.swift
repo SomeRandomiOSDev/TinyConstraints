@@ -150,7 +150,7 @@
     }
 #endif
 
-public struct LayoutEdge: OptionSet {
+public struct LayoutEdge: OptionSet, Sendable {
     public let rawValue: UInt8
     public init(rawValue: UInt8) {
         self.rawValue = rawValue

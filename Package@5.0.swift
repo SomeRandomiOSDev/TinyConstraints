@@ -1,10 +1,10 @@
-// swift-tools-version:5.9
+// swift-tools-version:5.0
 import PackageDescription
 
 let package = Package(
     name: "TinyConstraints",
     platforms: [
-        .macOS(.v10_13), .iOS(.v12), .tvOS(.v12)
+        .macOS(.v10_11), .iOS(.v9), .tvOS(.v9)
     ],
     products: [
         .library(name: "TinyConstraints", targets: ["TinyConstraints"])
@@ -12,10 +12,7 @@ let package = Package(
     targets: [
         .target(
             name: "TinyConstraints",
-            path: "TinyConstraints",
-            swiftSettings: [
-                .enableExperimentalFeature("StrictConcurrency"),
-            ]
+            path: "TinyConstraints"
         )
     ],
     swiftLanguageVersions: [.v5]

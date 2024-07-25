@@ -30,35 +30,43 @@
 
 extension TinyEdgeInsets {
     
+    @inlinable
     public static func uniform(_ value: CGFloat) -> TinyEdgeInsets {
         return TinyEdgeInsets(top: value, left: value, bottom: value, right: value)
     }
     
+    @inlinable
     public static func top(_ value: CGFloat) -> TinyEdgeInsets {
         return TinyEdgeInsets(top: value, left: 0, bottom: 0, right: 0)
     }
     
+    @inlinable
     public static func left(_ value: CGFloat) -> TinyEdgeInsets {
         return TinyEdgeInsets(top: 0, left: value, bottom: 0, right: 0)
     }
     
+    @inlinable
     public static func bottom(_ value: CGFloat) -> TinyEdgeInsets {
         return TinyEdgeInsets(top: 0, left: 0, bottom: value, right: 0)
     }
     
+    @inlinable
     public static func right(_ value: CGFloat) -> TinyEdgeInsets {
         return TinyEdgeInsets(top: 0, left: 0, bottom: 0, right: value)
     }
     
+    @inlinable
     public static func horizontal(_ value: CGFloat) -> TinyEdgeInsets {
         return TinyEdgeInsets(top: 0, left: value, bottom: 0, right: value)
     }
     
+    @inlinable
     public static func vertical(_ value: CGFloat) -> TinyEdgeInsets {
         return TinyEdgeInsets(top: value, left: 0, bottom: value, right: 0)
     }
 }
 
+@inlinable
 public func + (lhs: TinyEdgeInsets, rhs: TinyEdgeInsets) -> TinyEdgeInsets {
     return .init(top: lhs.top + rhs.top, left: lhs.left + rhs.left, bottom: lhs.bottom + rhs.bottom, right: lhs.right + rhs.right)
 }

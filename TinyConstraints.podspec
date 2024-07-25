@@ -15,4 +15,5 @@ TinyConstraints is the syntactic sugar library that makes Auto Layout sweeter fo
     s.tvos.deployment_target = '9.0'
     s.osx.deployment_target = '10.11'
     s.source_files = 'TinyConstraints/Classes/**/*.{swift}'
+    s.pod_target_xcconfig = { 'SWIFT_STRICT_CONCURRENCY' => 'complete' }
 end

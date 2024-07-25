@@ -39,15 +39,17 @@ public enum ConstraintRelation: Int {
 
 public extension Collection where Iterator.Element == Constraint {
     
-    func activate() {
-        
+    @preconcurrency @MainActor
+    @inlinable func activate() {
+
         if let constraints = self as? Constraints {
             Constraint.activate(constraints)
         }
     }
     
-    func deActivate() {
-        
+    @preconcurrency @MainActor
+    @inlinable func deActivate() {
+
         if let constraints = self as? Constraints {
             Constraint.deactivate(constraints)
         }
@@ -62,6 +64,7 @@ public extension Constraint {
         return self
     }
 
+    @inlinable
     func set(_ active: Bool) -> Self {
         isActive = active
         return self
@@ -75,6 +78,7 @@ public extension Constraint {
             return self
         }
         
+        @inlinable
         func set(_ active: Bool) -> Self {
             isActive = active
             return self
